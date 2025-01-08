@@ -3,7 +3,7 @@ import cl from './PageForm.module.css'
 import InputMask from 'react-input-mask';
 import {useLocation, useNavigate} from "react-router-dom";
 import {useFetching} from "../../Hooks/useFetching";
-import {buyCertificates, getCertificates} from "../../API/APICertificates";
+import {buyCertificates} from "../../API/APICertificates";
 const PageForm = () => {
 
     const navigate = useNavigate()
@@ -21,7 +21,7 @@ const PageForm = () => {
     const [responseAPI, setResponseAPI] = useState()
     const [errors, setErrors] = useState({});
 
-    const [fetchData, isLoading, error, isDone] = useFetching(async (certificate, formData) => {
+    const [fetchData, , , isDone] = useFetching(async (certificate, formData) => {
         const response = await buyCertificates(certificate, formData)
         setResponseAPI(response)
     })

@@ -10,7 +10,7 @@ const PageCertificates = () => {
     const navigate = useNavigate()
     const [certificates, setCertificates] = useState([])
     const [chosen, setChosen] = useState({NAME:'Выберете товар...'})
-    const [fetchData, isLoading, error, isDone] = useFetching(async () => {
+    const [fetchData, isLoading, , isDone] = useFetching(async () => {
         const response = await getCertificates()
         setCertificates(response.data)
 
