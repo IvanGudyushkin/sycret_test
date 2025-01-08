@@ -1,0 +1,100 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.window{
+    width: 50%;
+    height: 75%;
+    border-radius: 50px;
+    border: solid 2px var(--color-pink);
+    padding: 30px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 980px) {
+        width: 80%;
+        height: 90%;
+        padding: 15px;
+        gap:16px;
+    }
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    label{
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @media (max-width: 980px) {
+            font-size: 14px;
+        }
+    }
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 2px solid var(--color-pink);
+        border-radius: 10px;
+        font-size: 18px;
+        @media (max-width: 980px) {
+            font-size: 14px;
+        }
+
+    }
+    textarea {
+        resize: none;
+
+    }
+    h1{
+        color: var(--color-pink);
+        font-size: 36px;
+        text-align: center;
+        @media (max-width: 1300px) {
+            font-size: 24px;
+            margin: 0 0 8px 0;
+        }
+        @media (max-width: 980px) {
+            font-size: 16px;
+            margin: 0 0 4px 0;
+        }
+        margin: 0 0 16px 0;
+    }
+    .error{
+        font-size: 14px;
+        color: red;
+    }
+    button{
+        margin-top: 16px;
+        border:none;
+        background-color: var(--color-pink);
+        color:white;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 0.3s scale ease-in-out;
+        font-size: 24px;
+        border-radius: 30px;
+        @media (max-width: 980px) {
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+        &:hover{
+            scale: 1.05;
+        }
+    }
+    .buttons{
+        display: flex;
+        gap:12px;
+        justify-content: center;
+        @media (max-width: 980px) {
+            gap:8px
+        }
+    }
+}
